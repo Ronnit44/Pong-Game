@@ -67,7 +67,7 @@ while game_running:
         ball.bounce_x_axis()
 
 
-    #if it misses the block
+    #if ball misses the block
     if ball.xcor() > 380:
         scoreboard.player1_point()
         ball.restart()
