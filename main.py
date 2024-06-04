@@ -28,22 +28,29 @@ left_block.penup()
 left_block.goto(x=-370,y=0)
 
 def move_up():
-    new_y_posi = right_block.ycor() + 40
-    right_block.goto(right_block.xcor(),new_y_posi)
+    new_y_posi = right_block.ycor() + 60
+    if new_y_posi <= UPPER_LIMIT:
+        right_block.goto(right_block.xcor(), new_y_posi)
 
 
 def move_down():
-    new_y_posi = right_block.ycor() - 40
-    right_block.goto(right_block.xcor(), new_y_posi)
+    new_y_posi = right_block.ycor() - 60
+    if new_y_posi >= LOWER_LIMIT:
+        right_block.goto(right_block.xcor(), new_y_posi)
+
 
 def go_up():
-    new_y_posi = left_block.ycor() + 40
-    left_block.goto(left_block.xcor(), new_y_posi)
+    new_y_posi = left_block.ycor() + 60
+    if new_y_posi <= UPPER_LIMIT:
+        left_block.goto(left_block.xcor(), new_y_posi)
 
 
 def go_down():
-    new_y_posi = left_block.ycor() - 40
-    left_block.goto(left_block.xcor(), new_y_posi)
+    new_y_posi = left_block.ycor() - 60
+    if new_y_posi >= LOWER_LIMIT:
+        left_block.goto(left_block.xcor(), new_y_posi)
+
+
 
 
 
